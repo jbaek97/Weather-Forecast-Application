@@ -1,0 +1,133 @@
+:root {
+    
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: lightblue;
+}
+
+/* Header */
+header {
+    border: 5px solid rgba(141, 139, 139, 0.481);
+    border-radius: 15px;
+    background-color: lightblue;
+}
+
+/* Search */
+.weatherSection {
+    display: flex;
+
+}
+.search {
+    background-color: rgb(213, 213, 213);
+    height: 70vh;
+    width: 25vw;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;    
+}
+
+.search h2 {
+    text-align: center;
+    background-color: aliceblue;
+    border-bottom-left-radius: 75%;
+    border-bottom-right-radius: 75%; 
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+form {
+    border: 5px solid black;
+    height: 3%;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.submit {
+    display: block;
+    border: 5px solid black;
+    height: 10%;
+    padding: 5%;
+    text-align: center;
+    font-size: 10px;
+    width: 25%;
+    margin: 0 auto;
+}
+
+/* Past Searches */
+.pastSearches {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.pastSearches li {
+    text-align: center;
+    border: 5px solid gray;
+    list-style-type: none;
+    background-color: white;
+    margin-top: 5%;
+    display: block;
+    height: 5%;
+    width: 75%;
+    font-size: 10px;
+}
+
+/* Results */
+.results {
+    border: 5px solid black;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+/* Current Weather Card */
+.mainWeatherCard {
+    display: flex;
+    border: 5px solid gray;
+    border-radius: 25px;
+    height: 40%;
+    background-color: white;
+    padding-left: 5%;
+}
+
+.currentWeatherCard {
+    font-size: 10px;
+}
+
+.currentWeatherCard img {
+    height: 45%;
+}
+
+/* 5-Day Forecast */
+.weatherReport {
+    display: flex; 
+    height: 59%;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(213, 213, 213);
+    list-style-type: none;
+    padding-left: 0;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;   
+}
+
+.weatherCard {
+    background-color: white;
+    width: 12%;
+    font-size: 12px;
+    height: 40%;
+    margin: 12% 2% 5%;
+    border-radius: 25px;
+    padding: 2%;
+}
+
+.weatherCard img {
+    height: 30%;
+    width: 50%;
+    margin: 0 auto;
+}
