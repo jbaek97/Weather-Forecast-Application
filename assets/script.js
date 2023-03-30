@@ -126,6 +126,27 @@ function getCoordinates(search) {
         })
 };
 
+function getPastSearch(event) {
+    event.preventDefault();
+    searchResult = event.target.innerHTML;
+    input.value = event.target.innerHTML;
+    console.log(searchResult);
+    getCoordinates(searchResult);
+    console.log(latitude);
+    // getWeather(coordinates);
+    // addCurrentWeather();
+    // add5DayWeather();
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+    var history = JSON.parse(localStorage.getItem('searchHistory'));
+    console.log(history);
+    for (i = 0; i < history.length; i++) {
+        pastSearches.innerHTML += `<li><button class="pastSearchButton">${history[i]}</button></li>`;
+    }
+    $(".pastSearches").children().children(0).on('click', getPastSearch);
+    // console.log(document.querySelectorAll(".pastSearchButton"));
+    return;
+};
+
 // Getting Weather 
 // function getWeather(coordinates) {
 //     var coordinate = JSON.parse(localStorage.getItem('coordinates'));
@@ -232,10 +253,11 @@ function getSearch(event) {
     var history = JSON.parse(localStorage.getItem('searchHistory'));
     console.log(history);
     for (i = 0; i < history.length; i++) {
-        pastSearches.innerHTML += `<li>${history[i]}</li>`;
+        pastSearches.innerHTML += `<li><button class="pastSearchButton">${history[i]}</button></li>`;
     }
+    $(".pastSearches").children().children(0).on('click', getPastSearch);
     return;
 };
 
-submitButton.addEventListener('click', getSearch);
 
+submitButton.addEventListener('click', getSearch);
