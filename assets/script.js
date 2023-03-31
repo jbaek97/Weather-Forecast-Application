@@ -3,7 +3,7 @@ var zipcode = "";
 var latitude = "";
 var longitude = "";
 var apiCall = "";
-var apiKey = "4125cec9b57f7e08d393563e3c0b9459" ;
+var apiKey = "993cb1b2004ad1764179551487d2794b" ;
 var input = document.getElementById("cityEntry");
 console.log(input);
 var submitButton = document.querySelector(".submit");
