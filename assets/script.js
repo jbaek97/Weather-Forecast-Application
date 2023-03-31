@@ -20,7 +20,7 @@ var searchHistory = [];
 function getCoordinates(search) {
     $('li').remove();
     var q = search;
-    var apiCallCoordinates = `http://api.openweathermap.org/geo/1.0/direct?q=${q}&appid=${apiKey}`;
+    var apiCallCoordinates = `https://api.openweathermap.org/geo/1.0/direct?q=${q}&appid=${apiKey}`;
     fetch(apiCallCoordinates) 
         .then(function(response) {
             if (!response.ok) {
@@ -44,7 +44,7 @@ function getCoordinates(search) {
             console.log(lat);
             var lon = coordinate[0].lon;
             console.log(lon);
-            var apiCallWeather = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+            var apiCallWeather = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
             console.log(apiCallWeather);
             fetch(apiCallWeather) 
                 .then(function(response) {
