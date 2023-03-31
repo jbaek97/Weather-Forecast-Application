@@ -88,7 +88,7 @@ function getCoordinates(search) {
                         Humidity: humidityPercentage
                     };
                     console.log(weatherObject);
-                    mainWeatherCard.innerHTML += `<fig class="currentWeatherCard"><h2>${weatherObject.Name}</h2><h3>${weatherObject.Date}</h3><img src="http://openweathermap.org/img/wn/${weatherObject.Icon}@2x.png"><h3>${weatherObject.Temperature}</h3><h3>${weatherObject.Wind}</h3><h3>${weatherObject.Humidity}</h3></fig>`;
+                    mainWeatherCard.innerHTML += `<fig class="currentWeatherCard"><h2>${weatherObject.Name}</h2><h3>${weatherObject.Date}</h3><img src="https://openweathermap.org/img/wn/${weatherObject.Icon}@2x.png"><h3>${weatherObject.Temperature}</h3><h3>${weatherObject.Wind}</h3><h3>${weatherObject.Humidity}</h3></fig>`;
                     localStorage.setItem(`Day 1`, JSON.stringify(weatherObject));}
                 )
                 .then(function add5DayWeather() {
@@ -119,7 +119,7 @@ function getCoordinates(search) {
                         Humidity: humidityPercentage
                     };
                     console.log(weatherObject);
-                    weatherReport.innerHTML += `<li class="weatherCard"><h3>${weatherObject.Date}</h3><img src="http://openweathermap.org/img/wn/${weatherObject.Icon}@2x.png"><h3>${weatherObject.Temperature}</h3><h3>${weatherObject.Wind}</h3><h3>${weatherObject.Humidity}</h3></li>`;
+                    weatherReport.innerHTML += `<li class="weatherCard"><h3>${weatherObject.Date}</h3><img src="https://openweathermap.org/img/wn/${weatherObject.Icon}@2x.png"><h3>${weatherObject.Temperature}</h3><h3>${weatherObject.Wind}</h3><h3>${weatherObject.Humidity}</h3></li>`;
                     localStorage.setItem(`Day ${i + 1}`, JSON.stringify(weatherObject));
                 }
                 
@@ -135,9 +135,6 @@ function getPastSearch(event) {
     console.log(searchResult);
     getCoordinates(searchResult);
     console.log(latitude);
-    // getWeather(coordinates);
-    // addCurrentWeather();
-    // add5DayWeather();
     localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
     var history = JSON.parse(localStorage.getItem('searchHistory'));
     console.log(history);
