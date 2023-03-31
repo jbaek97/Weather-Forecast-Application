@@ -107,6 +107,8 @@ input {
 
 .currentWeatherCard img {
     height: 45%;
+    background-color: lightblue;
+    border-radius: 25px;
 }
 
 /* 5-Day Forecast */
@@ -139,6 +141,8 @@ input {
     height: 30%;
     width: 50%;
     margin: 0 auto;
+    background-color: lightblue;
+    border-radius: 25px;
 }
 
 /* footer */
